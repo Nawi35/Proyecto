@@ -10,7 +10,7 @@ int main()
         for(i = 0; i < 3; i++){
             scanf("%f", &grades[i]);
             average[j] += grades[i]/3;
-        if(total >= 7)
+        if(average[j] >= 7)
             approbed[0]++;
         else
             if (total >= 4)
