@@ -9,9 +9,12 @@ int main()
         scanf("%f", &grades[i]);
         total += grades[i]/3;
 	if(total >= 7)
-		printf("El alumnos esta aprobado.\n")
+		printf("El alumno est%c aprobado.\n", 160);
 	else
-		printf("El alumnos esta desaprobado.\n")
+        if (total >= 4)
+            printf("El alumno pasa a Diciembre.\n");
+        else
+            printf("El alumno pasa a Marzo.\n");
     }
     printf("El promedio es de %.2f.\n", total);
     return 0;
