@@ -4,19 +4,19 @@
 int main()
 {
     float grades[3], total = 0;
-    int i, j;	
+    int i, j, approbed[3] = {0,0,0};
     for(j = 0; j < 50; j++)
-   for(i = 0; i < 3; i++){
-        scanf("%f", &grades[i]);
-        total += grades[i]/3;
-	if(total >= 7)
-		printf("El alumno est%c aprobado.\n", 160);
-	else
-        if (total >= 4)
-            printf("El alumno pasa a Diciembre.\n");
+        for(i = 0; i < 3; i++){
+            scanf("%f", &grades[i]);
+            total += grades[i]/3;
+        if(total >= 7)
+            approbed[0]++;
         else
-            printf("El alumno pasa a Marzo.\n");
-    }
-    printf("El promedio es de %.2f.\n", total);
+            if (total >= 4)
+                approbed[1]++;
+            else
+                approbed[2]++;
+        }
+    printf("Aprobaron %d alumnos.\n%d se fueron a diciembre y %d a marzo.\n", approbed[0], approbed[1], approbed[2]);
     return 0;
 }
